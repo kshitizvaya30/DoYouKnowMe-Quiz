@@ -38,9 +38,33 @@ function play(question , answer){
     answer:"Marvel"
   }];
   
+   
+//DATA OF HIGH SCORES
+var highScores = [
+    {
+      name:"kshitiz",
+      score: 5,
+    },{
+      name:"Priyanshu",
+      score: 4,
+    }
+  ]
   
   //LOOP
   for(var i = 0 ; i < questions.length ;i++){
     var CurrentQuestion = questions[i];
     play(CurrentQuestion.question , CurrentQuestion.answer);
   }
+
+  
+
+if( score > highScores[1].score ){
+    highScores[1].name = userName;
+    highScores[1].score = score;
+  }
+console.log("TopScores");
+console.log("Kshitiz");
+console.log (highScores[1].name);
+console.log("IF YOU ARE IN THE TOP 2 , SEND A SCREENSHOT OF YOUR WINNING , SO THAT IT CAN BE UPDATED");
+ 
+
